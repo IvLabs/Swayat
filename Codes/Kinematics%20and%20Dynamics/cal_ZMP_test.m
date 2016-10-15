@@ -1,10 +1,10 @@
 %function ZMP = cal_ZMP(X_COM,Y_COM,Z_COM,frequency,time)
 %% instantaneous COM acceleration.
-X_COM = xlsread('better_plot','A1:A91');
-Y_COM = xlsread('better_plot','B1:B91');
-Z_COM = xlsread('better_plot','C1:C91');
+X_COM = xlsread('com_both','A1:A220');
+Y_COM = xlsread('com_both','B1:B220');
+Z_COM = xlsread('com_both','C1:C220');
 frequency=10;
-time=9;
+time=22;
 dt = 1/frequency;
 time_instances = frequency*time;
 timestamp = linspace(0,time,time*frequency)';
