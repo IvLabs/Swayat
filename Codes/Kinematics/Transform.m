@@ -1,3 +1,9 @@
+% Author : Sapan Agrawal
+% Date : 11/10/2016
+% This function takes in the DH parameters and angles of corresponding
+% branch.
+% Output: Transformation matrix T consisting all 0T1, 1T2, 2T3 ... 
+
 function [T]= Transform(Dh_parameter,angle)
 angle = angle';
 [N,M] = size(angle);
