@@ -1,5 +1,8 @@
 % Author: Sapan Agrawal
-function [X_sim,Y_sim,Z_sim] = inverse()
+% USED IN angles.m
+% The function gives the simplified forms of COM equations. 
+%%
+function [X_sim,Y_sim,Z_sim,c] = inverse()
 p  = sym('p','real');
 r  = sym('r','real');
 c = 45;
