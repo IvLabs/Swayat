@@ -1,8 +1,13 @@
-function [p2,R] = angles(X,Y,Z)
+% Author: Sapan Agrawal
+% The function angles takes X,Y,Z co-ordinates of COM as input and computes
+% the joint angles.
+% Note: Here for computation Right leg is considered as Stance leg. 
+%%
+function [t] = angles(X,Y,Z)
 R=0;
 p  = sym('p','real');
 r  = sym('r','real');
-[X_sim,Y_sim,Z_sim] = inverse();
+[X_sim,Y_sim,Z_sim,c] = inverse();
 p = solve(X_sim == X, p);
 p = eval(p)-2.8;
 p2 = min(p(1),p(2)); 
@@ -55,7 +60,7 @@ if rz3 > 0 && Y > 0
 end
 
 i=1;
-    
+t = [0,R,p2/2,-p2,p2/2,-R,0,R,-c/2,c,-c/2,-R,0,0,0,0,0,0,0,0];   
 
 %ry2 = min(abs(ry3(1)),abs(ry3(2)));
 % r = (r(1) - r(2))/2;
