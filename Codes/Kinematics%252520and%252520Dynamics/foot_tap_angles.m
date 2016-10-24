@@ -24,6 +24,6 @@ end
 figure
 plot3(L*sin(x(:,1)),-L*sin(y(:,1)),z) % x disp of COM vs y disp of COM
 hold on
-plot3(L*sin(x(:,1))+ 2*32.4913,L*sin(y(:,1)),z)% 2*32.4913=2*max(L*sin(x(:,1)))
+plot3(L*sin(x(:,1)),L*sin(y(:,1)),z)% 2*32.4913=2*max(L*sin(x(:,1)))
 hold off
 grid on;
